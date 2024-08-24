@@ -7,6 +7,7 @@
   <version>1.0-SNAPSHOT</version>
   <name>my-app</name>
   <url>https://maven.apache.org</url>
+
   <dependencies>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
@@ -15,9 +16,11 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+
   <build>
     <pluginManagement>
       <plugins>
@@ -32,17 +35,17 @@
       </plugins>
     </pluginManagement>
     <plugins>
-      <build>
-        <plugins>
-            <!-- Maven WAR Plugin -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>3.3.1</version>
-                <configuration>
-                    <warSourceDirectory>src/main/webapp</warSourceDirectory>
-                </configuration>
-            </plugin>
+      <!-- Maven WAR Plugin -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.3.1</version>
+        <configuration>
+          <warSourceDirectory>src/main/webapp</warSourceDirectory>
+        </configuration>
+      </plugin>
+
+      <!-- Maven Enforcer Plugin -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-enforcer-plugin</artifactId>
